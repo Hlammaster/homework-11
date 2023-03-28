@@ -11,7 +11,7 @@ import static org.openqa.selenium.By.linkText;
 
 public class AllureTest {
     @Test
-    @DisplayName("Я котик")
+    @DisplayName("Я котик!")
     public void testIssueSearch() {
        SelenideLogger.addListener("allure", new AllureSelenide());
 
