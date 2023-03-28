@@ -1,5 +1,19 @@
 plugins {
     id 'java-library'
+    id 'io.qameta.allure' version '2.11.2'
+}
+allure {
+    report {
+        version.set("2.19.0")
+    }
+    adapter {
+        aspectjWeaver.set(true)
+        frameworks {
+            junit5{
+                adapterVersion.set("2.19.0")
+            }
+        }
+    }
 }
 
 repositories {
@@ -8,7 +22,7 @@ repositories {
 
 dependencies {
     testImplementation (
-            "com.codeborne:selenide:6.11.2",
+            "com.codeborne:selenide:6.12.2",
             "org.junit.jupiter:junit-jupiter:5.9.2",
 
     )
